@@ -29,10 +29,10 @@ function upload(response, request) {
 	var form = new formidable.IncomingForm();
 	form.parse(request, function(error, fields, files) {
 		console.log("Parsing Done!");
-		fs.rename(files.upload.path, "tmp/test.png", function(err) {
+		fs.rename(files.upload.path, "/tmp/test.png", function(err) {
 			if (err) {
 				fs.unlink("tmp/test.png");
-				fs.rename(files.upload.path, "tmp/test.png");
+				fs.rename(files.upload.path, "/tmp/test.png");
 			}
 			response.writeHead(200, {"Content-Type" : "text/html"});
 			response.write("Image Uploaded!");
