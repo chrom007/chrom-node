@@ -1,0 +1,11 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "tutorial first project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
